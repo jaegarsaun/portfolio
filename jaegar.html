@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>jaegar</title>
+</head>
+<body >
+    <main>
+
+
+        <section id="landing">
+            <header>
+                <h1>JAEGAR</h1>
+                <div class="block">
+                    <div class="inner">
+                        <div class="left">
+                            <button class="left-inner" id="btn1" onclick="repo();">
+                                <div style="z-index: 10; display: flex; width: 100%; padding: 1rem; align-items: center;">
+                                    GITHUB
+                                    <div class="line" id="line1"></div>
+                                </div>
+                                <div class="slide-block" id="slide1"></div>
+                            </button>
+                            <button class="left-inner"  id="btn2" onclick="contact();">
+                                <div style="z-index: 10; display: flex; width: 100%; padding: 1rem; align-items: center;">
+                                    CONTACT
+                                    <div class="line" id="line2"></div>
+                                </div>
+                                <div class="slide-block" id="slide2"></div>
+                            </button>
+                        </div>
+                        <div class="right">
+                            <p class="right-inner rhead">WEB DEVELOPER</p>
+                            <div class="underline"></div>
+                            <br>
+                            <div class="under">
+                                <p class="right-inner rbody">Code &#x2022; Design &#x2022; Love &#x2022; Passion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+
+
+        <section id="work">
+            <h3>
+                WORK
+            </h3>
+            <ul>
+                <li>
+                    <div class="up">
+                        <img class="workimg" src="assets/img/Screenshot 2023-02-06 at 2.14.01 PM.png" width="100%" alt="">
+                    </div>
+                    <div class="down">
+                        <p class="workbody">Contracted to make a fully responsive, mobile friendly website and app UI for AFKCash. Made with HTML/CSS/JavaScript</p>
+                        <button class="githubbtn" onclick="github1();">WEBSITE</button>
+                    </div>
+                </li>
+                <li class="push">
+                    <div class="up">
+                        <img class="workimg" src="assets/img/preparedplus.png" width="100%" alt="">
+                    </div>
+                    <div class="down">
+                        <p class="workbody">Contracted to make a fully responsive, mobile friendly website with an ordering system and admin panel backend. Made with HTML/CSS, JavaScript, PHP and SQL</p>
+                        <button class="githubbtn" onclick="github2();">GITHUB</button>
+                    </div>
+                </li>
+                <li>
+                    <div class="up">
+                        <img class="workimg" src="assets/img/googlemaps.png" width="100%" alt="">
+                    </div>
+                    <div class="down">
+                        <p class="workbody">"Funny Google Earth" A website utilizing the Google Earth JavaScript API. The site generates a random google earth location on button press </p>
+                        <button class="githubbtn" onclick="github3();">GITHUB</button>
+                    </div>
+                </li>
+                <li class="push">
+                    <div class="up">
+                        <img class="workimg" src="assets/img/game.png" width="100%" alt="">
+                    </div>
+                    <div class="down">
+                        <p class="workbody">A word scrambling game made with VueJs. This is fully dynamic and even counts your points!</p>
+                        <button class="githubbtn" onclick="github4();">GITHUB</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="contact">
+            <h3 id="contact-head">CONTACT</h3>
+            <div class="contact">
+                <form action="/send-email.php" method="POST" class="order-form" id="order-form">
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="email" placeholder="Email" name="email">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Message" name="message"></textarea>
+                    <button type="submit">SUBMIT</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+
+<script src="app.js"></script>
+</body>
+</html>
