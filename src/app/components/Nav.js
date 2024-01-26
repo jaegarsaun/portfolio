@@ -1,20 +1,21 @@
 "use client";
 import { RiMenu5Line } from "react-icons/ri";
+import Image from 'next/image'
 import { useState } from "react";
 
-
-
-const Menu = ({menuClass}) => {
+const Menu = ({ menuClass }) => {
   return (
-    <div className={`menu flex justify-end items-end text-end md:hidden absolute right-0 top-[-20px] w-[125px] p-[2rem] bg-primary z-40 transition-all ${menuClass}`}>
+    <div
+      className={`menu flex justify-end items-end text-end md:hidden absolute right-0 top-[-20px] w-[125px] p-[2rem] bg-primary z-40 transition-all ${menuClass}`}
+    >
       <ul className="block my-[10vh]">
-        <li className="hover:underline hover:cursor-pointer">
+        <li className="">
           <a href="#">home</a>
         </li>
-        <li className="hover:underline hover:cursor-pointer">
+        <li className="">
           <a href="#">projects</a>
         </li>
-        <li className="hover:underline hover:cursor-pointer">
+        <li className="">
           <a href="#">contact</a>
         </li>
       </ul>
@@ -34,25 +35,35 @@ export default function Nav() {
 
   return (
     <nav className="p-[2rem] fixed top-0 left-0 flex w-full z-50">
-      <div className="logo flex grow justifty-start items-center"></div>
-      <div className="links flex max-w-1/2 md:w-1/3 lg:w-1/4">
-        <ul className="hidden items-center justify-evenly md:flex w-full">
-          <li className="hover:underline hover:cursor-pointer">
+      <div className="logo flex grow justifty-start items-center">
+        <Image
+            src="/images/logo.png"
+            width={100}
+            height={100}
+            alt="Jaegar"
+        />
+      </div>
+      <div className="links flex max-w-1/2 md:w-1/3 lg:w-1/5">
+        <ul className="hidden items-center justify-between md:flex w-full">
+          <li className="border-b-4 border-transparent hover:border-primary hover:cursor-pointer">
             <a href="#">home</a>
           </li>
-          <li className="hover:underline hover:cursor-pointer">
+          <li className="border-b-4 border-transparent hover:border-primary hover:cursor-pointer">
             <a href="#">projects</a>
           </li>
-          <li className="hover:underline hover:cursor-pointer">
+          <li className="border-b-4 border-transparent hover:border-primary hover:cursor-pointer">
             <a href="#">contact</a>
           </li>
         </ul>
         <button className={`z-50`} onClick={toggleNav}>
-          <RiMenu5Line className={`block md:hidden z-50 transition-all ${buttonClass}`} size={25} />
+          <RiMenu5Line
+            className={`block md:hidden z-50 transition-all ${buttonClass}`}
+            size={25}
+          />
         </button>
       </div>
 
-      <Menu menuClass={menuClass}/>
+      <Menu menuClass={menuClass} />
     </nav>
   );
 }
