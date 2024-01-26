@@ -44,7 +44,7 @@ export default function Nav() {
         />
       </div>
       <div className="links flex max-w-1/2 md:w-1/3 lg:w-1/5">
-        <ul className="hidden items-center justify-between md:flex w-full">
+        <ul className="hidden items-center gap-7 md:flex w-full">
           <li className="border-b-4 border-transparent hover:border-primary hover:cursor-pointer">
             <a href="#">home</a>
           </li>

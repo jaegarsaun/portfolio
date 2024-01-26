@@ -12,12 +12,22 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        fadeOut: {
+          'from': { opacity: 1 },
+          'to': { opacity: 0 }
+        }
+      },
+      animation: {
+        'fade-out': 'fadeOut 1s forwards'
+      }
     },
     colors: {
       primary: '#3b28cc',
       secondary: '#adb3cb',
       white: '#fff',
-      dark: '#0B091A'
+      dark: '#0B091A',
+      transparent: 'transparent',
     }
   },
   plugins: [],
