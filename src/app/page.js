@@ -45,18 +45,18 @@ export default function Home() {
           />
           <div className="bio flex flex-col gap-3 text-center justify-center items-center lg:text-left">
             <p className="font-normal text-xl">
-              Hello! I'm a 20-year-old web wizard from Newfoundland, Canada. By
+              Hello! I&apos;m a 20-year-old web wizard from Newfoundland, Canada. By
               day, I craft websites as a front-end developer, and by night, I
               hit the books at Nova Scotia Community College.
             </p>
             <p className="font-normal text-xl hidden md:block">
               My two Yorkies are my faithful sidekicks, always ready to join me
-              on my adventures, whether I'm coding or exploring the great
+              on my adventures, whether I&apos;m coding or exploring the great
               outdoors.
             </p>
             <p className="font-normal text-xl hidden md:block">
-              Living in Newfoundland has shaped me into someone who's as
-              resilient as I am friendly. Watch this space - I'm just getting
+              Living in Newfoundland has shaped me into someone who&apos;s as
+              resilient as I am friendly. Watch this space - I&apos;m just getting
               started on making my mark in the digital world!
             </p>
           </div>
