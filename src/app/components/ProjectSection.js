@@ -13,7 +13,7 @@ export default function ProjectSections({
     <div className="grow bg-secondary rounded-full h-[2px] w-auto"></div>
 </div>
 
-      <div className="flex flex-col md:flex-row gap-10 items-start">
+      <div className="flex justify-center items-center flex-col lg:flex-row gap-20 items-start">
         <Image
           src={imageSrc}
           width={500}
@@ -22,7 +22,7 @@ export default function ProjectSections({
           className="border-4 border-primary"
         />
         <div className="flex flex-col gap-3 text-center justify-center items-center lg:text-left">
-          <p className="font-normal text-xl">{description}</p>
+          <p className="font-normal text-2xl">{description}</p>
           <p>{tech}</p>
           <a href={github}>Github</a>
         </div>

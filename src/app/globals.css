@@ -45,5 +45,8 @@ body {
   transform-origin: top right; /* Ensures the transform originates from the top right corner */
   z-index: -1;
 }
+p, h1, img, a, button, span {
+  z-index: 5;
+}
 
 

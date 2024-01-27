@@ -1,9 +1,11 @@
 "use client";
 import { RiMenu5Line } from "react-icons/ri";
 import Image from "next/image";
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 
 const Menu = ({ menuClass }) => {
+
+
   return (
     <div
       className={`menu flex justify-end items-end text-end md:hidden absolute right-0 top-[-20px] w-[125px] p-[2rem] bg-primary z-40 transition-all ${menuClass}`}
@@ -25,6 +27,23 @@ const Menu = ({ menuClass }) => {
 
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 200) {
+        setHasScrolled(true);
+      } else {
+        setHasScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleNav = () => {
     setIsOpen(!isOpen);
@@ -35,7 +54,7 @@ export default function Nav() {
   let buttonClass = isOpen ? "rotate-90" : "rotate-0";
 
   return (
-    <nav className="p-[2rem] fixed top-0 left-0 flex w-full z-50">
+    <nav className={`p-[2rem] fixed top-0 left-0 flex w-full z-50 transition-all duration-1000 ${hasScrolled ? 'bg-dark' : 'bg-transparent'}` }>
       <div className="logo flex grow justifty-start items-center ">
         <Image
           src="/images/logo.png"
@@ -50,10 +69,10 @@ export default function Nav() {
       <div className="links flex max-w-1/2 md:w-1/3 lg:w-1/5">
         <ul className="hidden items-center gap-7 md:flex w-full">
           <li className="border-b-4 border-transparent hover:border-primary hover:cursor-pointer">
-            <a href="#">home</a>
+            <a href="#home">home</a>
           </li>
           <li className="border-b-4 border-transparent hover:border-primary hover:cursor-pointer">
-            <a href="#">projects</a>
+            <a href="#projects">projects</a>
           </li>
           <li className="border-b-4 border-transparent hover:border-primary hover:cursor-pointer">
             <a href="#">contact</a>
