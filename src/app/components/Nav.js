@@ -1,6 +1,6 @@
 "use client";
 import { RiMenu5Line } from "react-icons/ri";
-import Image from 'next/image'
+import Image from "next/image";
 import { useState } from "react";
 
 const Menu = ({ menuClass }) => {
@@ -29,18 +29,22 @@ export default function Nav() {
   const toggleNav = () => {
     setIsOpen(!isOpen);
   };
+  const [isHovered, setIsHovered] = useState(false);
 
   let menuClass = isOpen ? "translate-x-0" : "translate-x-full";
   let buttonClass = isOpen ? "rotate-90" : "rotate-0";
 
   return (
     <nav className="p-[2rem] fixed top-0 left-0 flex w-full z-50">
-      <div className="logo flex grow justifty-start items-center">
+      <div className="logo flex grow justifty-start items-center ">
         <Image
-            src="/images/logo.png"
-            width={100}
-            height={100}
-            alt="Jaegar"
+          src="/images/logo.png"
+          width={100}
+          height={100}
+          alt="Jaegar"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+          className={`transition-all ${isHovered ? "scale-110" : ""}`}
         />
       </div>
       <div className="links flex max-w-1/2 md:w-1/3 lg:w-1/5">

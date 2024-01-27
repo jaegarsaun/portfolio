@@ -4,7 +4,7 @@ export default function Trail () {
     useEffect(() => {
         const handleMouseMove = event => {
             const trail = document.createElement('div');
-            trail.className = 'absolute h-[5px] w-[5px] rounded-full bg-primary pointer-events-none transition-all animate-fade-out z-10';
+            trail.className = 'absolute h-[10px] w-[10px] rounded-full bg-primary pointer-events-none transition-all animate-fade-out z-0';
             document.body.appendChild(trail);
 
             trail.style.left = `${event.pageX}px`;

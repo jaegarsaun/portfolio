@@ -16,7 +16,7 @@ body {
   font-weight: 600;
   color: white;
   background-color: #0B091A;
-  overflow: hidden;
+
 }
 
 @layer utilities {
@@ -25,11 +25,11 @@ body {
   }
 }
 .background {
-  position: relative; /* This establishes the near positioning context for the pseudo-element */
   overflow: hidden;
   width: 100%;
   height: 100vh;
 }
+
 
 .background::after {
   content: '';
@@ -43,6 +43,7 @@ body {
   background: linear-gradient(to bottom left, #3b28cc 0%, #0B091A 30%, #0B091A 50%);
   transform: skewY(-45deg); /* Skews the rectangle */
   transform-origin: top right; /* Ensures the transform originates from the top right corner */
+  z-index: -1;
 }
 
 
