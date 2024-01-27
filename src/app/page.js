@@ -12,6 +12,14 @@ export default function Home() {
       tech: "HTML, TAILWIND, JAVASCRIPT, REACT, NEXT.JS, GOLANG",
       github: "N/A",
     },
+    {
+      title: "TheJJBot",
+      description:
+        "A discord bot developed by me and Josh Scott for our class discord server. With a variety of utility, fun and administration commands it is a very versatile tool.",
+      imageSrc: "/images/jjbot-ss.png",
+      tech: "JAVASCRIPT, NODE.JS, DISCORD.JS",
+      github: "",
+    },
   ];
 
   return (

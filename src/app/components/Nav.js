@@ -54,7 +54,7 @@ export default function Nav() {
   let buttonClass = isOpen ? "rotate-90" : "rotate-0";
 
   return (
-    <nav className={`p-[2rem] fixed top-0 left-0 flex w-full z-50 transition-all duration-1000 ${hasScrolled ? 'bg-dark' : 'bg-transparent'}` }>
+    <nav className={`p-[2rem] fixed top-0 left-0 flex w-full z-50 transition-all duration-1000 ${hasScrolled ? 'gradient-background' : 'bg-transparent'}` }>
       <div className="logo flex grow justifty-start items-center ">
         <Image
           src="/images/logo.png"

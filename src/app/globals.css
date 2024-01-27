@@ -50,3 +50,7 @@ p, h1, img, a, button, span {
 }
 
 
+.gradient-background {
+  background-image: linear-gradient(to bottom, #0B091A 50%, rgba(11, 9, 26, 0) 100%);
+}
+
