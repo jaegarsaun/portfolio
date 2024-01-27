@@ -1,7 +1,22 @@
 import Image from "next/image";
 import Trail from "./components/Trail.js";
 import Nav from "./components/Nav.js";
+import ProjectSection from "./components/ProjectSection.js";
 export default function Home() {
+
+
+  const projects = [
+    {
+      title: "Quick Poll",
+      description: "Our capstone project, developed at the Nova Scotia Community College (NSCC), is a collaborative effort by me and three of my colleagues. The project is a web application named 'Quick Poll', which offers a user-friendly platform for creating and sharing polls. This application is designed to provide a simple yet effective way for users to gather opinions and preferences from their friends or a broader audience.",
+      imageSrc: "/images/quickpoll-ss.png",
+      tech: "HTML, TAILWIND, JAVASCRIPT, REACT, NEXT.JS, GOLANG",
+      github: "N/A",
+    },
+  ];
+
+
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between overflow-y-scroll z-20">
       {/* Landing page */}
@@ -20,9 +35,11 @@ export default function Home() {
 
       {/* About */}
       <section
-        className="about flex justify-center items-center flex-col w-[100vw] h-[100vh] p-24 lg:flex-row gap-10 z-20"
+        className="about flex justify-center items-center flex-col w-[100vw] h-[100vh] p-24"
         id="about"
       >
+        <h2 className="text-5xl border-b-4 border-primary z-20">ABOUT ME</h2>
+        <div className="flex flex-col lg:flex-row gap-10 z-20">
         <Image
           src="/images/portfolio-picture.png"
           width={375}
@@ -45,7 +62,20 @@ export default function Home() {
             making my mark in the digital world!
           </p>
         </div>
+        </div>
       </section>
+      {/* Projects*/}
+      {projects.map((project) => (
+        <ProjectSection
+          key={project.title}
+          title={project.title}
+          description={project.description}
+          imageSrc={project.imageSrc}
+          tech={project.tech}
+          github={project.github}
+        />
+      ))}
+      {/* Contact */}
     </main>
   );
 }
