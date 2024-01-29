@@ -4,21 +4,21 @@ import Image from "next/image";
 import React, { useState, useEffect } from 'react';
 
 const Menu = ({ menuClass }) => {
-
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div
-      className={`menu flex justify-end items-end text-end md:hidden absolute right-0 top-[-20px] w-[125px] p-[2rem] bg-primary z-40 transition-all ${menuClass}`}
+      className={`menu flex justify-end items-center text-end md:hidden absolute right-0 top-[-20px] h-[100vh] w-[100vw] p-[2rem] bg-dark z-40 transition-all duration-500 ${menuClass}`}
     >
-      <ul className="block my-[10vh]">
+      <ul className="flex flex-col gap-10 my-[10vh]">
         <li className="">
-          <a href="#">home</a>
+          <a href="#home" className="text-4xl" >home</a>
         </li>
         <li className="">
-          <a href="#">projects</a>
+          <a href="#projects" className="text-4xl" >projects</a>
         </li>
         <li className="">
-          <a href="#">contact</a>
+          <a href="#contact" className="text-4xl" >contact</a>
         </li>
       </ul>
     </div>
@@ -50,7 +50,7 @@ export default function Nav() {
   };
   const [isHovered, setIsHovered] = useState(false);
 
-  let menuClass = isOpen ? "translate-x-0" : "translate-x-full";
+  let menuClass = isOpen ? "translate-y-0" : "translate-y-[-100%]";
   let buttonClass = isOpen ? "rotate-90" : "rotate-0";
 
   return (
@@ -63,7 +63,7 @@ export default function Nav() {
           alt="Jaegar"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
-          className={`transition-all ${isHovered ? "scale-110" : ""}`}
+          className={`transition-all ${isHovered ? "scale-110" : ""} z-50`}
         />
       </div>
       <div className="links flex max-w-1/2 md:w-1/3 lg:w-1/5">

@@ -40,10 +40,10 @@ export default function Home() {
 
       {/* About */}
       <section
-        className="about flex justify-center items-center flex-col w-[100vw] h-[100vh] p-24"
+        className="about flex justify-center items-center flex-col w-[100vw] h-[100vh] p-10 md:p-24 gap-10"
         id="about"
       >
-        <h2 className="text-5xl border-b-4 border-primary z-20">ABOUT ME</h2>
+        <h2 className="text-4xl border-b-4 border-primary z-20 md:text-5xl">ABOUT ME</h2>
         <div className="flex flex-col lg:flex-row gap-10 z-20">
           <Image
             src="/images/portfolio-picture.png"
