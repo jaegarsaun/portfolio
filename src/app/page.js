@@ -2,6 +2,8 @@ import Image from "next/image";
 import Trail from "./components/Trail.js";
 import Nav from "./components/Nav.js";
 import ProjectSection from "./components/ProjectSection.js";
+import AboutSection from "./components/AboutSection.js";
+import Section from "./components/Section.js";
 export default function Home() {
   const projects = [
     {
@@ -22,8 +24,10 @@ export default function Home() {
     },
   ];
 
+  const profileImage = "/images/portfolio-picture.png";
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between overflow-y-scroll z-20">
+    <main className="flex min-h-screen flex-col items-center justify-between z-20 relative">
       {/* Landing page */}
       <section className="background p-24 " id="home">
         <Nav />
@@ -39,37 +43,23 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section
-        className="about flex justify-center items-center flex-col w-[100vw] h-[100vh] p-10 md:p-24 gap-10"
-        id="about"
-      >
-        <h2 className="text-4xl border-b-4 border-primary z-20 md:text-5xl">ABOUT ME</h2>
-        <div className="flex flex-col lg:flex-row gap-10 z-20">
-          <Image
-            src="/images/portfolio-picture.png"
-            width={375}
-            height={375}
-            alt="Jaegar"
-          />
-          <div className="bio flex flex-col gap-3 text-center justify-center items-center lg:text-left">
-            <p className="font-normal text-xl">
-              Hello! I&apos;m a 20-year-old web wizard from Newfoundland, Canada. By
-              day, I craft websites as a front-end developer, and by night, I
-              hit the books at Nova Scotia Community College.
-            </p>
-            <p className="font-normal text-xl hidden md:block">
-              My two Yorkies are my faithful sidekicks, always ready to join me
-              on my adventures, whether I&apos;m coding or exploring the great
-              outdoors.
-            </p>
-            <p className="font-normal text-xl hidden md:block">
-              Living in Newfoundland has shaped me into someone who&apos;s as
-              resilient as I am friendly. Watch this space - I&apos;m just getting
-              started on making my mark in the digital world!
-            </p>
-          </div>
-        </div>
-      </section>
+        <AboutSection image={profileImage} imageAlt={"Jaegar"}>
+          <p className="font-normal text-xl">
+            Hello! I&apos;m a 20-year-old web wizard from Newfoundland, Canada.
+            By day, I craft websites as a front-end developer, and by night, I
+            hit the books at Nova Scotia Community College.
+          </p>
+          <p className="font-normal text-xl hidden md:block">
+            My two Yorkies are my faithful sidekicks, always ready to join me on
+            my adventures, whether I&apos;m coding or exploring the great
+            outdoors.
+          </p>
+          <p className="font-normal text-xl hidden md:block">
+            Living in Newfoundland has shaped me into someone who&apos;s as
+            resilient as I am friendly. Watch this space - I&apos;m just getting
+            started on making my mark in the digital world!
+          </p>
+        </AboutSection>
       <section id="projects">
         {/* Projects*/}
         {projects.map((project) => (
@@ -80,10 +70,16 @@ export default function Home() {
             imageSrc={project.imageSrc}
             tech={project.tech}
             github={project.github}
+            contentStyle={projects.indexOf(project) % 2 === 0 ? "left" : "right"}
           />
         ))}
       </section>
       {/* Contact */}
+      {/* <section className="contact flex justify-center items-center flex-col w-[100vw] h-[100vh] p-10 md:p-24 gap-10 bg-secondary">
+          <div className="contactWrapper flex items-center flex-col gap-10 h-full w-full">
+            <h1 className="text-5xl text-primary font-bold border-b-4 border-dark">CONTACT ME</h1>
+          </div>
+      </section> */}
     </main>
   );
 }

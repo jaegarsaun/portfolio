@@ -13,9 +13,11 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
   font-weight: 600;
   color: white;
   background-color: #0B091A;
+  color: #e7e8ef;
 
 }
 
@@ -53,4 +55,10 @@ p, h1, img, a, button, span {
 .gradient-background {
   background-image: linear-gradient(to bottom, #0B091A 50%, rgba(11, 9, 26, 0) 100%);
 }
+/* .contact{
+  position: relative;
+  border-top-left-radius: 60% 25%;
+  border-top-right-radius: 60% 25%;
+} */
+
 
