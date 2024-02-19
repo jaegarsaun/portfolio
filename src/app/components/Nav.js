@@ -75,7 +75,7 @@ export default function Nav() {
             <a href="#projects">projects</a>
           </li>
           <li className="border-b-4 border-transparent hover:border-primary hover:cursor-pointer">
-            <a href="#">contact</a>
+            <a href="https://linktr.ee/jaegarsaun" target="_blank">contact</a>
           </li>
         </ul>
         <button className={`z-50`} onClick={toggleNav}>
