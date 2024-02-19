@@ -42,6 +42,7 @@ export default function ProjectSections({
             <p>{tech}</p>
             <a
               href={github}
+              target="_blank"
               className="bg-transparent p-3 w-[15vw] text-center rounded-xl border-2 border-primary hover:bg-primary transition-all hover:scale-110"
             >
               Github
@@ -55,6 +56,7 @@ export default function ProjectSections({
             <p>{tech}</p>
             <a
               href={github}
+              target="_blank"
               className="bg-transparent p-3 w-[15vw] text-center rounded-xl border-2 border-primary hover:bg-primary transition-all hover:scale-110"
             >
               Github

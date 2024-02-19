@@ -9,7 +9,7 @@ export default function Home() {
     {
       title: "Quick Poll",
       description:
-        "Our capstone project, developed at the NSCC by me and my peers. A web app that allows users to create and share straw polls",
+        "Our capstone project, developed at the NSCC by me and my peers. A web app that allows users to create and share straw polls. Still in development",
       imageSrc: "/images/quickpoll-ss.png",
       tech: "HTML, TAILWIND, JAVASCRIPT, REACT, NEXT.JS, GOLANG",
       github: "N/A",
@@ -20,8 +20,32 @@ export default function Home() {
         "A discord bot developed by me and Josh Scott for our class discord server. With a variety of utility, fun and administration commands it is a very versatile tool.",
       imageSrc: "/images/jjbot-ss.png",
       tech: "JAVASCRIPT, NODE.JS, DISCORD.JS",
-      github: "",
+      github: "https://github.com/BigBandzJosh/TheJJBot",
     },
+    {
+      title: "FlickFinder",
+      description:
+        "A web app that provides a fun and interactive way to find movies or shows to watch. This project was developed by me for my Self Directed Study at NSCC. Still in Development",
+      imageSrc: "/images/flickfinder-ss.png",
+      tech: "NEXT.JS, TAILWIND, TYPESCRIPT, API",
+      github: "https://github.com/jaegarsaun/flickfinder",
+    },
+    {
+      title: "Fitness Club Web App",
+      description:
+        "Made with PHP utilizing the MVC design pattern, this web app allows users to sign up for personal training sessions. Trainers can manage their clients, and admins can manage the trainers.",
+      imageSrc: "/images/fitnessapp-ss.png",
+      tech: "PHP, MYSQL, HTML, CSS, JAVASCRIPT",
+      github: "https://github.com/jaegarsaun/fitnessclub-web-app",
+    },
+    {
+      title: "My Github",
+      description:
+        "My Github page is filled with a collection of different projects I have made and collaborated on. From static web pages to full stack web apps, there is a little bit of everything.",
+      imageSrc: "/images/github-ss.png",
+      tech: "",
+      github: "https://github.com/jaegarsaun",
+    }
   ];
 
   const profileImage = "/images/portfolio-picture.png";
